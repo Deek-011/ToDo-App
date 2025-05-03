@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/todos")
+      .get("https://todo-app-54be.onrender.com/todos")
       .then((res) => setTodos(res.data))
       .catch((err) => console.error("Failed to fetch todos:", err));
   }, []);
@@ -20,7 +20,7 @@ const App = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/todos/${id}`)
+      .delete(`https://todo-app-54be.onrender.com/todos/${id}`)
       .then(() => setTodos(todos.filter((todo) => todo._id !== id)))
       .catch((err) => console.error("Failed to delete todo:", err));
   };
