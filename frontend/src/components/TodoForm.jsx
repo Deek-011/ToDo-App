@@ -10,7 +10,7 @@ const TodoForm = ({ onAdd }) => {
 
     try {
       // Send POST request to backend to add a new todo
-      const res = await axios.post("http://localhost:5000/todos", { text });
+      const res = await axios.post("https://todo-app-54be.onrender.com/todos", { text });
       
       // Pass the new todo back to parent component
       onAdd(res.data);
